@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="dist/css/main.css">
+
+  <script src="https://kit.fontawesome.com/c80f5c1776.js" crossorigin="anonymous"></script>
+  
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+<body>
+<main class="main">
+  <div class="flex-container">
+    <article class="profile">
+      <div class="profile__header">
+        <img class="profile__image" src="dist/images/image-jeremy.png" alt="">
+        <h1 class="profile__title"><span class="profile__title profile__title--small">Report for</span> Jeremy Robson</h1>
+      </div>
+
+      <nav class="profile__nav">
+        <a class="profile__link" href="#">Daily</a>
+        <a class="profile__link--activy" href="#">Weekly</a>
+        <a class="profile__link" href="#">Monthly</a>
+      </nav>
+    </article>
+
+    <div class="grid-container">
+      <article class="card card--work">
+        <div class="card__content">
+          <div class="card__content--header">
+            <h2 class="card__title">Work</h2>
+            <i class="fas fa-ellipsis-h card__menu"></i>
+          </div>
+          <div class="card__content--footer">
+            <p class="card__time">32hrs</p>
+            <p class="card__previous">Last week - 36hrs</p>
+          </div>
+        </div>
+      </article>
+      <article class="card card--play">
+        <div class="card__content">
+          <div class="card__content--header">
+            <h2 class="card__title">Play</h2>
+            <i class="fas fa-ellipsis-h card__menu"></i>
+          </div>
+          <div class="card__content--footer">
+            <p class="card__time">10hrs</p>
+            <p class="card__previous">Last week - 8hrs</p>
+          </div>
+        </div>
+      </article>
+      <article class="card card--study">
+        <div class="card__content">
+          <div class="card__content--header">
+            <h2 class="card__title">Study</h2>
+            <i class="fas fa-ellipsis-h card__menu"></i>
+          </div>
+          <div class="card__content--footer">
+            <p class="card__time">4hrs</p>
+            <p class="card__previous">Last week - 7hrs</p>
+          </div>
+        </div>
+      </article>
+      <article class="card card--exercise">
+        <div class="card__content">
+          <div class="card__content--header">
+            <h2 class="card__title">Exercise</h2>
+            <i class="fas fa-ellipsis-h card__menu"></i>
+          </div>
+          <div class="card__content--footer">
+            <p class="card__time">4hrs</p>
+            <p class="card__previous">Last week - 5hrs</p>
+          </div>
+        </div>
+      </article>
+      <article class="card card--social">
+        <div class="card__content">
+          <div class="card__content--header">
+            <h2 class="card__title">Social</h2>
+            <i class="fas fa-ellipsis-h card__menu"></i>
+          </div>
+          <div class="card__content--footer">
+            <p class="card__time">5hrs</p>
+            <p class="card__previous">Last week - 10hrs</p>
+          </div>
+        </div>
+      </article>
+      <article class="card card--selfcare">
+        <div class="card__content">
+          <div class="card__content--header">
+            <h2 class="card__title">Self Care</h2>
+            <i class="fas fa-ellipsis-h card__menu"></i>
+          </div>
+          <div class="card__content--footer">
+            <p class="card__time">2hrs</p>
+            <p class="card__previous">Last week - 2hrs</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</main>
+</body>
+</html>

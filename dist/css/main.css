@@ -1,0 +1,185 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+p {
+  font-size: 18px; }
+
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+@keyframes max-height {
+  from {
+    height: 75%;
+    background-color: #1c1f4a; }
+  to {
+    height: 100%;
+    background-color: #5847eb; } }
+
+body {
+  overflow: hidden; }
+
+.main {
+  background: #0f1424;
+  width: 100vw;
+  height: 40rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Rubik", sans-serif;
+  color: #fff; }
+
+.flex-container {
+  display: flex;
+  max-width: 80rem;
+  min-height: 30rem;
+  gap: 2rem; }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  width: 100%;
+  gap: 2rem; }
+
+.profile {
+  background: #1c1f4a;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px; }
+  .profile__header {
+    background: #5847eb;
+    border-radius: 15px;
+    height: 60%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; }
+  .profile__image {
+    height: auto;
+    width: 6rem;
+    border: 3px #fff solid;
+    border-radius: 50%; }
+  .profile__title {
+    font-size: 2.2rem;
+    font-weight: 400; }
+    .profile__title--small {
+      font-size: 0.9rem;
+      display: block; }
+  .profile__nav {
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    font-size: 1.125rem;
+    font-weight: 300;
+    color: #bdc1ff; }
+  .profile__link:hover {
+    color: #fff;
+    font-weight: 400;
+    transition: all 0.2s ease-in; }
+  .profile__link--activy {
+    color: #fff;
+    font-weight: 400; }
+
+.card {
+  border-radius: 15px 15px 20px 20px;
+  display: flex;
+  align-items: flex-end; }
+  .card__content {
+    height: 75%;
+    width: 100%;
+    background: #1c1f4a;
+    border-radius: 15px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; }
+    .card__content--header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+    .card__content--footer {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem; }
+    .card__content:hover {
+      cursor: pointer;
+      animation: max-height 0.5s ease-out;
+      animation-fill-mode: forwards; }
+  .card__title {
+    font-size: 1.2rem;
+    font-weight: 500; }
+  .card__menu {
+    color: #bdc1ff; }
+    .card__menu:hover {
+      color: #fff;
+      cursor: pointer; }
+  .card__time {
+    font-size: 3rem;
+    font-weight: 300; }
+  .card__previous {
+    font-size: 0.9rem;
+    color: #bdc1ff; }
+  .card--work {
+    background-color: #ff8c66;
+    background-image: url("../images/icon-work.svg");
+    background-repeat: no-repeat;
+    background-position-x: right; }
+  .card--play {
+    background-color: #56c2e6;
+    background-image: url("../images/icon-play.svg");
+    background-repeat: no-repeat;
+    background-position-x: right; }
+  .card--study {
+    background-color: #ff5c7c;
+    background-image: url("../images/icon-study.svg");
+    background-repeat: no-repeat;
+    background-position-x: right; }
+  .card--exercise {
+    background-color: #4acf81;
+    background-image: url("../images/icon-exercise.svg");
+    background-repeat: no-repeat;
+    background-position-x: right; }
+  .card--social {
+    background-color: #7536d3;
+    background-image: url("../images/icon-social.svg");
+    background-repeat: no-repeat;
+    background-position-x: right; }
+  .card--selfcare {
+    background-color: #f1c65b;
+    background-image: url("../images/icon-self-care.svg");
+    background-repeat: no-repeat;
+    background-position-x: right; }
+
+@media (max-width: 829px) {
+  .main {
+    height: 100vh; }
+  .flex-container {
+    height: 40rem; }
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0.5rem; } }
+
+@media (max-width: 600px) {
+  body {
+    overflow-y: visible; }
+  .main {
+    display: block;
+    height: 120rem;
+    padding: 1rem; }
+  .flex-container {
+    flex-direction: column;
+    height: 15rem; }
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr); }
+  .card {
+    height: 14rem; } }

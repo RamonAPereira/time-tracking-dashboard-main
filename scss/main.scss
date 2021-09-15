@@ -1,0 +1,234 @@
+@import "config";
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+@mixin background-position {
+  background-repeat: no-repeat;
+  background-position-x: right;
+}
+@keyframes max-height {
+  from {
+    height: 75%;
+    background-color: $dark-blue;
+  }
+  to {
+    height: 100%;
+    background-color: $blue;
+  }
+}
+body {
+  overflow: hidden;
+}
+.main {
+  background: $very-dark-blue;
+  width: 100vw;
+  height: 40rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $rubik;
+  color: #fff;
+}
+
+.flex-container {
+  display: flex;
+  max-width: 80rem;
+  min-height: 30rem;
+  gap: 2rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  width: 100%;
+  gap: 2rem;
+}
+
+.profile {
+  background: $dark-blue;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+
+  &__header {
+    background: $blue;
+    border-radius: 15px;
+    height: 60%;
+    padding: 2rem;
+    @include flex-column;
+  }
+
+  &__image {
+    height: auto;
+    width: 6rem;
+    border: 3px #fff solid;
+    border-radius: 50%;
+  }
+
+  &__title {
+    font-size: 2.2rem;
+    font-weight: 400;
+
+    &--small {
+      font-size: 0.9rem;
+      display: block;
+    }
+  }
+
+  &__nav {
+    height: 40%;
+    @include flex-column;
+    padding: 2rem;
+    font-size: 1.125rem;
+    font-weight: 300;
+    color: $pale-blue;
+  }
+
+  &__link {
+    &:hover {
+      color: #fff;
+      font-weight: 400;
+      transition: all 0.2s ease-in;
+    }
+
+    &--activy {
+      color: #fff;
+      font-weight: 400;
+    }
+  }
+}
+
+.card {
+  border-radius: 15px 15px 20px 20px;
+  display: flex;
+  align-items: flex-end;
+
+  &__content {
+    height: 75%;
+    width: 100%;
+    background: $dark-blue;
+    border-radius: 15px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    &--header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &--footer {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    &:hover {
+      cursor: pointer;
+      animation: max-height 0.5s ease-out;
+      animation-fill-mode: forwards;
+    }
+  }
+
+  &__title {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+
+  &__menu {
+    color: $pale-blue;
+
+    &:hover {
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+
+  &__time {
+    font-size: 3rem;
+    font-weight: 300;
+  }
+
+  &__previous {
+    font-size: 0.9rem;
+    color: $pale-blue;
+  }
+
+  &--work {
+    background-color: $light-red;
+    background-image: url("../images/icon-work.svg");
+    @include background-position;
+  }
+
+  &--play {
+    background-color: $soft-blue;
+    background-image: url("../images/icon-play.svg");
+    @include background-position;
+  }
+
+  &--study {
+    background-color: $light-pink;
+    background-image: url("../images/icon-study.svg");
+    @include background-position;
+  }
+
+  &--exercise {
+    background-color: $lime-green;
+    background-image: url("../images/icon-exercise.svg");
+    @include background-position;
+  }
+
+  &--social {
+    background-color: $violet;
+    background-image: url("../images/icon-social.svg");
+    @include background-position;
+  }
+
+  &--selfcare {
+    background-color: $soft-orange;
+    background-image: url("../images/icon-self-care.svg");
+    @include background-position;
+  }
+}
+
+@media (max-width: 829px) {
+  .main {
+    height: 100vh;
+  }
+  .flex-container {
+    height: 40rem;
+  }
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    overflow-y: visible;
+  }
+  .main {
+    display: block;
+    height: 120rem;
+    padding: 1rem;
+  }
+  .flex-container {
+    flex-direction: column;
+    height: 15rem;
+  }
+  .grid-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+  }
+  .card {
+    height: 14rem;
+  }
+}
