@@ -26,9 +26,9 @@
       </div>
 
       <nav class="profile__nav">
-        <a class="profile__link" href="#">Daily</a>
-        <a class="profile__link--activy" href="#">Weekly</a>
-        <a class="profile__link" href="#">Monthly</a>
+        <a class="profile__link ui-daily" href="#" onclick="changePeriodDaily()">Daily</a>
+        <a class="profile__link--activy ui-weekly" href="#" onclick="changePeriodWeekly()">Weekly</a>
+        <a class="profile__link ui-monthly" href="#" onclick="changePeriodMonthly()">Monthly</a>
       </nav>
     </article>
 
@@ -40,8 +40,8 @@
             <i class="fas fa-ellipsis-h card__menu"></i>
           </div>
           <div class="card__content--footer">
-            <p class="card__time">32hrs</p>
-            <p class="card__previous">Last week - 36hrs</p>
+            <p class="card__time card__time--work">32hrs</p>
+            <p class="card__previous card__previous--work">Last week - 36hrs</p>
           </div>
         </div>
       </article>
@@ -52,8 +52,8 @@
             <i class="fas fa-ellipsis-h card__menu"></i>
           </div>
           <div class="card__content--footer">
-            <p class="card__time">10hrs</p>
-            <p class="card__previous">Last week - 8hrs</p>
+            <p class="card__time card__time--play">10hrs</p>
+            <p class="card__previous card__previous--play">Last week - 8hrs</p>
           </div>
         </div>
       </article>
@@ -64,8 +64,8 @@
             <i class="fas fa-ellipsis-h card__menu"></i>
           </div>
           <div class="card__content--footer">
-            <p class="card__time">4hrs</p>
-            <p class="card__previous">Last week - 7hrs</p>
+            <p class="card__time card__time--study">4hrs</p>
+            <p class="card__previous card__previous--study">Last week - 7hrs</p>
           </div>
         </div>
       </article>
@@ -76,8 +76,8 @@
             <i class="fas fa-ellipsis-h card__menu"></i>
           </div>
           <div class="card__content--footer">
-            <p class="card__time">4hrs</p>
-            <p class="card__previous">Last week - 5hrs</p>
+            <p class="card__time card__time--exercise">4hrs</p>
+            <p class="card__previous card__previous--exercise">Last week - 5hrs</p>
           </div>
         </div>
       </article>
@@ -88,8 +88,8 @@
             <i class="fas fa-ellipsis-h card__menu"></i>
           </div>
           <div class="card__content--footer">
-            <p class="card__time">5hrs</p>
-            <p class="card__previous">Last week - 10hrs</p>
+            <p class="card__time card__time--social">5hrs</p>
+            <p class="card__previous card__previous--social">Last week - 10hrs</p>
           </div>
         </div>
       </article>
@@ -100,13 +100,14 @@
             <i class="fas fa-ellipsis-h card__menu"></i>
           </div>
           <div class="card__content--footer">
-            <p class="card__time">2hrs</p>
-            <p class="card__previous">Last week - 2hrs</p>
+            <p class="card__time card__time--selfcare">2hrs</p>
+            <p class="card__previous card__previous--selfcare">Last week - 2hrs</p>
           </div>
         </div>
       </article>
     </div>
   </div>
 </main>
+<script src="dist/js/app.js"></script>
 </body>
 </html>
